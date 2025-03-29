@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+header {
+  background-color: #004d99;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+main {
+  padding: 2em;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hero img {
+  width: 200px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+.content ul {
+  list-style-type: square;
+  margin-left: 1.5em;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #ddd;
+}
