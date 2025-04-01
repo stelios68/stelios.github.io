@@ -43,3 +43,23 @@ footer {
   padding: 1em;
   background-color: #ddd;
 }
+.language-switcher {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.language-switcher a {
+  background-color: #ffffff;
+  color: #004080;
+  padding: 6px 12px;
+  margin-left: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.language-switcher a:hover {
+  background-color: #e0e0e0;
+}
