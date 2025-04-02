@@ -41,7 +41,7 @@ body {
 /* === Sprach-Dropdown-Menü === */
 .language-dropdown {
   position: relative;
-  margin-right: 40px;
+  margin-right: 0;
 }
 
 .lang-btn {
@@ -53,6 +53,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9em;
+  margin-right: 30px;
 }
 
 .lang-menu {
