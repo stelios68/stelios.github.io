@@ -41,6 +41,7 @@ body {
 /* === Sprach-Dropdown-Menü === */
 .language-dropdown {
   position: relative;
+  padding-right: 10px;
 }
 
 .lang-btn {
