@@ -1,4 +1,4 @@
-/* Allgemeine Basis */
+/* === Basis-Layout === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,29 +6,41 @@ body {
   color: #333;
 }
 
-/* Header-Bereich */
-header {
+/* === Fester Header oben === */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #004080;
   color: white;
-}
-
-/* Obere Leiste mit Logo & Sprachmenü */
-.top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
-/* Logo links oben */
+/* === Linke Seite im Header: Logo + Titel === */
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   height: 90px;
+  margin-right: 20px;
 }
 
-/* Sprachmenü-Button */
+.seite-titel {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+/* === Sprach-Dropdown-Menü === */
 .language-dropdown {
   position: relative;
-  z-index: 1000;
 }
 
 .lang-btn {
@@ -66,20 +78,11 @@ header {
   background-color: #f0f0f0;
 }
 
-/* Dropdown sichtbar machen beim Hover */
 .language-dropdown:hover .lang-menu {
   display: block;
 }
 
-/* Überschrift unter der Leiste */
-.seite-titel {
-  text-align: center;
-  margin: 0;
-  padding: 1em 0;
-  font-size: 2em;
-}
-
-/* Hauptbereich */
+/* === Hauptinhalt rutscht unter den fixierten Header === */
 main {
-  padding: 2em;
+  padding: 160px 2em 2em;
 }
