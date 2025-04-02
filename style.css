@@ -68,3 +68,14 @@ main {
 .language-dropdown:hover .lang-menu {
   display: block;
 }
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  height: 60px;
+  margin-right: auto;
+}
