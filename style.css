@@ -63,6 +63,7 @@ body {
   margin-top: 4px;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 9999;
 }
 
 .lang-menu a {
@@ -84,5 +85,5 @@ body {
 
 /* === Hauptinhalt rutscht unter den fixierten Header === */
 main {
-  padding: 160px 2em 2em;
+  padding: 200px 2em 2em;
 }
