@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt – Stelios</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="topbar">
     <div class="topbar-left">
-      <img src="logo1.png" alt="Stelios Logo" class="logo">
-      <div class="title-box">
-        <h1 class="site-title">Kontakt</h1>
-        <p class="site-subtitle">Wir freuen uns auf Ihre Nachricht!</p>
+      <img src="logo1.png" alt="Stelios Logo" class="logo" />
+      <div class="site-title">
+        <h1>Willkommen bei Stelios</h1>
+        <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
       </div>
     </div>
     <div class="language-dropdown" tabindex="0">
@@ -24,31 +26,33 @@
     </div>
   </header>
 
+  <nav class="main-nav">
+    <a href="index.html">Startseite</a>
+    <a href="#">Produkte</a>
+    <a href="#">Galerie</a>
+    <a href="#">Über uns</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="#">Angebote</a>
+    <a href="#">FAQ</a>
+  </nav>
+
   <main>
-    <section class="kontaktformular">
+    <section class="content">
       <h2>Kontaktformular</h2>
-      <form action="https://formspree.io/f/meoarnjd" method="POST">
-        <label>Ihr Name:
-          <input type="text" name="name" required>
-        </label>
-        <label>E-Mail:
-          <input type="email" name="email" required>
-        </label>
-        <label>Telefonnummer:
-          <input type="tel" name="telefon">
-        </label>
-        <label>Ich bin:
-          <select name="kundentyp">
-            <option>Privatkunde</option>
-            <option>Geschäftskunde</option>
-          </select>
-        </label>
-        <label>Nachricht:
-          <textarea name="message" required></textarea>
-        </label>
+      <form action="https://formspree.io/f/meoarnjd" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Ihr Name" required />
+        <input type="email" name="email" placeholder="Ihre E-Mail" required />
+        <input type="tel" name="telefon" placeholder="Telefonnummer" />
+        <select name="kunde" required>
+          <option value="">Ich bin...</option>
+          <option value="privat">Privatkunde</option>
+          <option value="geschaeft">Geschäftskunde</option>
+        </select>
+        <textarea name="nachricht" placeholder="Ihre Nachricht" required></textarea>
         <button type="submit">Absenden</button>
       </form>
     </section>
   </main>
+
 </body>
 </html>
