@@ -2,22 +2,20 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kontakt – Stelios</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body> 
-
-  <!-- FIXE OBERLEISTE -->
+<body>
+  <!-- Fixierte obere Leiste -->
   <div class="topbar">
     <div class="topbar-left">
-      <img src="logo1.png" alt="Stelios Logo" class="logo" />
-      <div class="site-title">
-        <h1>Kontakt</h1>
-        <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
-      </div>
+      <img src="logo.png" alt="Stelios Logo" class="logo" />
     </div>
-
+    <div class="site-title">
+      <h1>Kontakt</h1>
+      <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
+    </div>
     <div class="language-dropdown" tabindex="0">
       <button class="lang-btn">Sprache</button>
       <div class="lang-menu">
@@ -28,8 +26,8 @@
     </div>
   </div>
 
-  <!-- NAVIGATION -->
-  <nav class="main-nav">
+  <!-- Fixierte Navigation -->
+  <nav class="main-menu">
     <a href="index.html">Startseite</a>
     <a href="#">Produkte</a>
     <a href="#">Galerie</a>
@@ -39,10 +37,10 @@
     <a href="#">FAQ</a>
   </nav>
 
-  <!-- KONTAKTINHALT -->
+  <!-- Hauptinhalt -->
   <main>
     <h2>Kontaktformular</h2>
-    <form action="https://formspree.io/f/meoarnjd" method="POST" class="kontakt-formular">
+    <form action="https://formspree.io/f/meoarnjd" method="POST" class="kontaktformular">
       <label>
         Ihr Name:
         <input type="text" name="name" required />
@@ -57,19 +55,18 @@
       </label>
       <label>
         Ich bin:
-        <select name="kundentyp">
-          <option>Bitte wählen</option>
-          <option>Privatkunde</option>
-          <option>Geschäftskunde</option>
+        <select name="kundentyp" required>
+          <option value="">Bitte wählen</option>
+          <option value="privat">Privatkunde</option>
+          <option value="geschaeft">Geschäftskunde</option>
         </select>
       </label>
       <label>
         Nachricht:
-        <textarea name="nachricht" required></textarea>
+        <textarea name="nachricht" rows="5" required></textarea>
       </label>
       <button type="submit">Absenden</button>
     </form>
   </main>
-
 </body>
 </html>
