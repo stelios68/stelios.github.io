@@ -1,33 +1,23 @@
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #333;
+  background: #fdfdfd;
+  color: #222;
 }
 
-/* Fixierte Top-Leiste */
 .topbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #004080;
-  color: white;
+  background-color: #ecd8c4;
+  color: #004080;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-}
-
-.topbar-left {
-  display: flex;
-  align-items: center;
 }
 
 .logo {
@@ -35,22 +25,21 @@ body {
   margin-right: 15px;
 }
 
-.titelblock {
+.title-box {
   display: flex;
   flex-direction: column;
 }
 
 .site-title {
-  margin: 0;
   font-size: 1.5em;
+  margin: 0;
 }
 
 .site-subtitle {
-  margin: 0;
   font-size: 0.9em;
+  margin: 0;
 }
 
-/* Sprache */
 .language-dropdown {
   position: relative;
   margin-left: auto;
@@ -58,26 +47,25 @@ body {
 
 .lang-btn {
   background-color: #fff;
-  color: #004080;
   border: 1px solid #004080;
-  padding: 8px 14px;
+  padding: 6px 12px;
   font-weight: bold;
-  border-radius: 6px;
+  color: #004080;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9em;
 }
 
 .lang-menu {
   display: none;
   position: absolute;
-  top: 110%;
+  top: 100%;
   right: 0;
-  background-color: white;
-  border: 1px solid #ccc;
   min-width: 150px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  z-index: 9999;
+  z-index: 999;
 }
 
 .language-dropdown:focus-within .lang-menu {
@@ -86,78 +74,67 @@ body {
 
 .lang-menu a {
   display: block;
-  padding: 10px 16px;
-  text-decoration: none;
+  padding: 10px 14px;
   color: #004080;
-  font-weight: bold;
-  font-size: 0.9em;
+  text-decoration: none;
 }
 
 .lang-menu a:hover {
   background-color: #f0f0f0;
 }
 
-/* Navigation */
-.navbar {
-  position: sticky;
-  top: 80px;
-  background-color: #f4dcdc;
-  padding: 0.5em;
+.main-nav {
+  background-color: #c89f9c;
   text-align: center;
+  padding: 0.5em 0;
+  margin-top: 120px;
+  position: sticky;
+  top: 90px;
   z-index: 999;
 }
 
-.navbar a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
+.main-nav a {
+  color: white;
   font-weight: bold;
+  text-decoration: none;
+  margin: 0 15px;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-/* Hauptbereich */
 main {
-  padding: 200px 2em 4em;
-  max-width: 800px;
-  margin: auto;
+  padding: 160px 2em 3em;
+  text-align: center;
 }
 
-/* Kontaktformular */
 .kontaktformular {
+  max-width: 600px;
+  margin: 3em auto;
+  padding: 1.5em;
+  background: #f6f6f6;
+  border-radius: 6px;
+}
+
+.kontaktformular form {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  margin-top: 2em;
 }
 
 .kontaktformular input,
 .kontaktformular select,
 .kontaktformular textarea {
-  padding: 10px;
+  padding: 0.7em;
   font-size: 1em;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.kontaktformular textarea {
-  height: 120px;
-  resize: vertical;
-}
-
 .kontaktformular button {
-  background-color: #004080;
+  background: #004080;
   color: white;
   border: none;
-  padding: 12px;
+  padding: 0.8em;
   border-radius: 4px;
-  font-size: 1em;
+  font-weight: bold;
   cursor: pointer;
-}
-
-.kontaktformular button:hover {
-  background-color: #003060;
 }
