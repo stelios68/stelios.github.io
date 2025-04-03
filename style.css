@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* === Fester Block oben === */
+/* === Fester oberer Bereich === */
 .topbar-wrapper {
   position: fixed;
   top: 0;
@@ -17,12 +17,12 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* === Erste Zeile: Logo, Titel, Sprache === */
+/* === Logo, Titel, Sprache === */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 1em 2em 0.5em 2em;
 }
 
 .topbar-left {
@@ -55,8 +55,7 @@ body {
 /* === Sprachmenü rechts === */
 .language-dropdown {
   position: relative;
-  margin-right: 30px;
-  z-index: 2000;
+  margin-right: 20px;
 }
 
 .lang-btn {
@@ -70,13 +69,12 @@ body {
   font-size: 0.9em;
 }
 
-/* Dropdown-Menü */
 .lang-menu {
   display: none;
   position: absolute;
   top: 100%;
   right: 0;
-  min-width: 160px;
+  min-width: 150px;
   background-color: white;
   border: 1px solid #ccc;
   margin-top: 4px;
@@ -103,10 +101,10 @@ body {
   background-color: #f0f0f0;
 }
 
-/* === Navigationsleiste === */
+/* === Navigation === */
 .navbar {
   background-color: #d8bda3;
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
 }
@@ -135,9 +133,9 @@ body {
   color: #000;
 }
 
-/* === Hauptbereich mit Abstand zum fixierten Header === */
+/* === Abstand zum festen Header === */
 main {
-  padding-top: 240px;
+  padding-top: 180px;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 4em;
