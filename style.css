@@ -1,12 +1,17 @@
-/* === Basislayout === */
+/* === Grundstruktur === */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background: #fdf9f4;
   color: #333;
 }
 
-/* === Fester oberer Bereich  === */
+/* === Fester oberer Bereich (Topbar + Menü) === */
 .topbar-wrapper {
   position: fixed;
   top: 0;
@@ -52,10 +57,17 @@ body {
   margin: 0.3em 0 0;
 }
 
-/* === Sprachmenü rechts === */
+/* Entfernt zusätzlich weißen Abstand im Titelbereich */
+.topbar-center h1,
+.topbar-center p {
+  margin: 0;
+  padding: 0;
+}
+
+/* === Sprachmenü === */
 .language-dropdown {
   position: relative;
-  margin-right: 20px;
+  margin-right: 16px;
 }
 
 .lang-btn {
@@ -101,7 +113,7 @@ body {
   background-color: #f0f0f0;
 }
 
-/* === Navigation === */
+/* === Navigation unter dem Topbar === */
 .navbar {
   background-color: #d8bda3;
   height: 50px;
@@ -133,9 +145,9 @@ body {
   color: #000;
 }
 
-/* === Abstand zum festen Header === */
+/* === Hauptbereich unter dem fixierten Header === */
 main {
-  padding-top: 180px;
+  padding-top: 200px;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 4em;
