@@ -1,22 +1,27 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #fefefe;
+  background: #f5f5f5;
   color: #333;
 }
 
+/* Fixierte Top-Leiste */
 .topbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #f5f5f5;
-  color: #004080;
+  background-color: #004080;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 1.5em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  padding: 1em 2em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   z-index: 1000;
 }
 
@@ -27,28 +32,32 @@ body {
 
 .logo {
   height: 60px;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
-.site-title h1 {
+.titelblock {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
   margin: 0;
   font-size: 1.5em;
-  color: #004080;
 }
 
-.site-title p {
+.site-subtitle {
   margin: 0;
   font-size: 0.9em;
-  color: #666;
 }
 
+/* Sprache */
 .language-dropdown {
   position: relative;
   margin-left: auto;
 }
 
 .lang-btn {
-  background-color: white;
+  background-color: #fff;
   color: #004080;
   border: 1px solid #004080;
   padding: 8px 14px;
@@ -61,14 +70,18 @@ body {
 .lang-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 110%;
   right: 0;
   background-color: white;
   border: 1px solid #ccc;
-  margin-top: 4px;
+  min-width: 150px;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   z-index: 9999;
+}
+
+.language-dropdown:focus-within .lang-menu {
+  display: block;
 }
 
 .lang-menu a {
@@ -84,79 +97,67 @@ body {
   background-color: #f0f0f0;
 }
 
-/* Öffnet Menü bei Fokus */
-.language-dropdown:focus-within .lang-menu {
-  display: block;
-}
-
-.menubar {
-  margin-top: 100px;
-  background-color: #e6cfcf;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
+/* Navigation */
+.navbar {
   position: sticky;
   top: 80px;
+  background-color: #f4dcdc;
+  padding: 0.5em;
+  text-align: center;
   z-index: 999;
 }
 
-.menubar a {
+.navbar a {
+  margin: 0 10px;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
   color: #333;
+  font-weight: bold;
 }
 
-.menubar a:hover {
-  color: #004080;
+.navbar a:hover {
+  text-decoration: underline;
 }
 
+/* Hauptbereich */
 main {
-  padding: 150px 2em 4em;
+  padding: 200px 2em 4em;
   max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
+  margin: auto;
 }
 
 /* Kontaktformular */
-#kontakt {
-  margin-top: 4em;
-  padding: 3em 2em;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-#kontakt h2 {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-#kontakt form {
+.kontaktformular {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  margin-top: 2em;
 }
 
-#kontakt input,
-#kontakt textarea,
-#kontakt select {
-  padding: 0.8em;
+.kontaktformular input,
+.kontaktformular select,
+.kontaktformular textarea {
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1em;
 }
 
-#kontakt button {
+.kontaktformular textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.kontaktformular button {
   background-color: #004080;
   color: white;
-  padding: 0.8em;
   border: none;
+  padding: 12px;
   border-radius: 4px;
-  font-weight: bold;
+  font-size: 1em;
   cursor: pointer;
 }
- 
-#kontakt button:hover {
-  background-color: #0066cc;
+
+.kontaktformular button:hover {
+  background-color: #003060;
 }
