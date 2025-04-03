@@ -8,14 +8,16 @@
 </head>
 <body>
 
-  <header class="topbar">
+  <!-- FIXE OBERLEISTE -->
+  <div class="topbar">
     <div class="topbar-left">
       <img src="logo1.png" alt="Stelios Logo" class="logo" />
       <div class="site-title">
-        <h1>Willkommen bei Stelios</h1>
+        <h1>Kontakt</h1>
         <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
       </div>
     </div>
+
     <div class="language-dropdown" tabindex="0">
       <button class="lang-btn">Sprache</button>
       <div class="lang-menu">
@@ -24,34 +26,49 @@
         <a href="#">Ελληνικά</a>
       </div>
     </div>
-  </header>
+  </div>
 
+  <!-- NAVIGATION -->
   <nav class="main-nav">
     <a href="index.html">Startseite</a>
     <a href="#">Produkte</a>
     <a href="#">Galerie</a>
     <a href="#">Über uns</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="kontakt.html" class="active">Kontakt</a>
     <a href="#">Angebote</a>
     <a href="#">FAQ</a>
   </nav>
 
+  <!-- KONTAKTINHALT -->
   <main>
-    <section class="content">
-      <h2>Kontaktformular</h2>
-      <form action="https://formspree.io/f/meoarnjd" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Ihr Name" required />
-        <input type="email" name="email" placeholder="Ihre E-Mail" required />
-        <input type="tel" name="telefon" placeholder="Telefonnummer" />
-        <select name="kunde" required>
-          <option value="">Ich bin...</option>
-          <option value="privat">Privatkunde</option>
-          <option value="geschaeft">Geschäftskunde</option>
+    <h2>Kontaktformular</h2>
+    <form action="https://formspree.io/f/meoarnjd" method="POST" class="kontakt-formular">
+      <label>
+        Ihr Name:
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Ihre E-Mail:
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Telefonnummer:
+        <input type="tel" name="telefon" />
+      </label>
+      <label>
+        Ich bin:
+        <select name="kundentyp">
+          <option>Bitte wählen</option>
+          <option>Privatkunde</option>
+          <option>Geschäftskunde</option>
         </select>
-        <textarea name="nachricht" placeholder="Ihre Nachricht" required></textarea>
-        <button type="submit">Absenden</button>
-      </form>
-    </section>
+      </label>
+      <label>
+        Nachricht:
+        <textarea name="nachricht" required></textarea>
+      </label>
+      <button type="submit">Absenden</button>
+    </form>
   </main>
 
 </body>
