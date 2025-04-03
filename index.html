@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
-<head><!DOCTYPE html>
-<html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stelios – Lebensmittelhandel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
+
+  <!-- Fixierte obere Leiste -->
+  <div class="topbar">
     <div class="topbar-left">
-      <img src="logo1.png" alt="Stelios Logo" class="logo">
-      <div class="title-box">
-        <h1 class="site-title">Willkommen bei Stelios</h1>
-        <p class="site-subtitle">Einzel- & Großhandel für hochwertige Lebensmittel</p>
-      </div>
+      <img src="Logo1.png" alt="Stelios Logo" class="logo" />
     </div>
+    <h1 class="seite-titel">Willkommen bei Stelios</h1>
     <div class="language-dropdown" tabindex="0">
       <button class="lang-btn">Sprache</button>
       <div class="lang-menu">
@@ -25,59 +22,10 @@
         <a href="#">Ελληνικά</a>
       </div>
     </div>
-  </header>
+  </div>
 
-  <nav class="main-nav">
-    <a href="#">Startseite</a>
-    <a href="#">Produkte</a>
-    <a href="#">Galerie</a>
-    <a href="#">Über uns</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="#">Angebote</a>
-    <a href="#">FAQ</a>
-  </nav>
-
-  <main>
-    <p>Wir importieren Spezialitäten aus Griechenland, Italien, Spanien und bieten alles vom Olivenöl bis zur Pasta.</p>
-    <p>Unser Lager bietet über 4.000 Artikel – Weine, Käsesorten, Gewürze, Meeresfrüchte und vieles mehr.</p>
-    <p>Unsere Kunden sind Restaurants, Hotels, Feinkostgeschäfte und Privathaushalte aus ganz Deutschland.</p>
-    <p>Besuchen Sie unsere Galerie für Eindrücke und Highlights der Saison.</p>
-    <p>Kontaktieren Sie uns für Angebote, Sonderaktionen oder individuelle Bestellungen.</p>
-    <p>Unsere Mitarbeiter beraten Sie gerne persönlich – auch in Ihrer Sprache!</p>
-    <p>Scrollen Sie ruhig weiter – hier kommen noch mehr Informationen …</p>
-    <p>Wir freuen uns auf Ihre Anfrage – Ihr Stelios-Team!</p>
-  </main>
-</body>
-</html>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stelios – Lebensmittelhandel</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- Oberer fixer Bereich -->
-  <header class="topbar">
-    <div class="topbar-left">
-      <img src="logo1.png" alt="Stelios Logo" class="logo" />
-      <div class="titelblock">
-        <h1 class="site-title">Willkommen bei Stelios</h1>
-        <p class="site-subtitle">Einzel- & Großhandel für hochwertige Lebensmittel</p>
-      </div>
-    </div>
-
-    <div class="language-dropdown" tabindex="0">
-      <button class="lang-btn">🌐 Sprache</button>
-      <div class="lang-menu">
-        <a href="#">Deutsch</a>
-        <a href="#">English</a>
-        <a href="#">Ελληνικά</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="navbar">
+  <!-- Fixierte zweite Leiste -->
+  <div class="menubar">
     <a href="#">Startseite</a>
     <a href="#">Produkte</a>
     <a href="#">Galerie</a>
@@ -85,33 +33,37 @@
     <a href="#kontakt">Kontakt</a>
     <a href="#">Angebote</a>
     <a href="#">FAQ</a>
-  </nav>
+  </div>
 
   <!-- Hauptinhalt -->
   <main>
-    <p>Wir importieren Spezialitäten aus Griechenland, Italien, Spanien und bieten alles vom Olivenöl bis zur Pasta.</p>
-    <p>Unser Lager bietet über 4.000 Artikel – Weine, Käsesorten, Gewürze, Meeresfrüchte und vieles mehr.</p>
-    <p>Unsere Kunden sind Restaurants, Hotels, Feinkostgeschäfte und Privathaushalte aus ganz Deutschland.</p>
-    <p>Besuchen Sie unsere Galerie für Eindrücke und Highlights der Saison.</p>
-    <p>Kontaktieren Sie uns für Angebote, Sonderaktionen oder individuelle Bestellungen.</p>
-    <p>Unsere Mitarbeiter beraten Sie gerne persönlich – auch in Ihrer Sprache!</p>
-    <p>Scrollen Sie ruhig weiter – hier kommen noch mehr Informationen …</p>
-    <p>Wir freuen uns auf Ihre Anfrage – Ihr Stelios-Team!</p>
+    <section class="text-block">
+      <p>Wir importieren Spezialitäten aus Griechenland, Italien, Spanien und bieten alles vom Olivenöl bis zur Pasta.</p>
+      <p>Unser Lager bietet über 4.000 Artikel – Weine, Käsesorten, Gewürze, Meeresfrüchte und vieles mehr.</p>
+      <p>Unsere Kunden sind Restaurants, Hotels, Feinkostgeschäfte und Privathaushalte aus ganz Deutschland.</p>
+      <p>Besuchen Sie unsere Galerie für Eindrücke und Highlights der Saison.</p>
+      <p>Kontaktieren Sie uns für Angebote, Sonderaktionen oder individuelle Bestellungen.</p>
+      <p>Unsere Mitarbeiter beraten Sie gerne persönlich – auch in Ihrer Sprache!</p>
+      <p>Scrollen Sie ruhig weiter – hier kommen noch mehr Informationen …</p>
+      <p>Wir freuen uns auf Ihre Anfrage – Ihr Stelios-Team!</p>
+    </section>
 
-    <!-- Kontaktformular -->
-    <h2 id="kontakt">Kontaktformular</h2>
-    <form action="https://formspree.io/f/meoarjnd" method="POST" class="kontaktformular">
-      <input type="text" name="name" placeholder="Ihr Name" required />
-      <input type="email" name="email" placeholder="Ihre E-Mail" required />
-      <input type="tel" name="telefon" placeholder="Telefonnummer" />
-      <select name="kunde" required>
-        <option value="">Ich bin...</option>
-        <option value="privat">Privatkunde</option>
-        <option value="geschaeft">Geschäftskunde</option>
-      </select>
-      <textarea name="nachricht" placeholder="Nachricht" required></textarea>
-      <button type="submit">Absenden</button>
-    </form>
+    <!-- Kontaktformular Abschnitt -->
+    <section id="kontakt" class="kontaktbereich">
+      <h2>Kontaktformular</h2>
+      <form action="https://formspree.io/f/meoanrjd" method="POST">
+        <input type="text" name="name" placeholder="Ihr Name" required />
+        <input type="email" name="email" placeholder="Ihre E-Mail" required />
+        <input type="tel" name="telefon" placeholder="Telefonnummer" />
+        <select name="typ" required>
+          <option value="">Ich bin...</option>
+          <option value="privat">Privatkunde</option>
+          <option value="geschaeft">Geschäftskunde</option>
+        </select>
+        <textarea name="nachricht" placeholder="Nachricht" rows="5" required></textarea>
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
   </main>
 
 </body>
