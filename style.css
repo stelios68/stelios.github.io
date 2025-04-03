@@ -1,33 +1,23 @@
-/* === Grundstruktur === */
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  background: #fdf9f4;
+  background: #fefefe;
   color: #333;
 }
 
-/* === Fester oberer Bereich (Topbar + Menü) === */
-.topbar-wrapper {
+.topbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  background-color: #f8f3e8;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* === Logo, Titel, Sprache === */
-.topbar {
+  background-color: #f5f5f5;
+  color: #004080;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em 0.5em 2em;
+  padding: 0.5em 1.5em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
 }
 
 .topbar-left {
@@ -37,46 +27,33 @@ body {
 
 .logo {
   height: 60px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
-.topbar-center {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.header-title {
-  font-size: 1.8em;
+.site-title h1 {
   margin: 0;
+  font-size: 1.5em;
   color: #004080;
 }
 
-.header-subtitle {
-  font-size: 1em;
-  color: #666;
-  margin: 0.3em 0 0;
-}
-
-/* Entfernt zusätzlich weißen Abstand im Titelbereich */
-.topbar-center h1,
-.topbar-center p {
+.site-title p {
   margin: 0;
-  padding: 0;
+  font-size: 0.9em;
+  color: #666;
 }
 
-/* === Sprachmenü === */
 .language-dropdown {
   position: relative;
-  margin-right: 16px;
+  margin-left: auto;
 }
 
 .lang-btn {
-  background-color: #ffffff;
+  background-color: white;
   color: #004080;
   border: 1px solid #004080;
-  padding: 6px 12px;
+  padding: 8px 14px;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 0.9em;
 }
@@ -86,18 +63,12 @@ body {
   position: absolute;
   top: 100%;
   right: 0;
-  min-width: 150px;
   background-color: white;
   border: 1px solid #ccc;
   margin-top: 4px;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   z-index: 9999;
-}
-
-.language-dropdown:focus-within .lang-menu {
-  display: block;
 }
 
 .lang-menu a {
@@ -113,49 +84,79 @@ body {
   background-color: #f0f0f0;
 }
 
-/* === Navigation unter dem Topbar === */
-.navbar {
-  background-color: #d8bda3;
-  height: 50px;
-  display: flex;
-  align-items: center;
+/* Öffnet Menü bei Fokus */
+.language-dropdown:focus-within .lang-menu {
+  display: block;
 }
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.menubar {
+  margin-top: 100px;
+  background-color: #e6cfcf;
   display: flex;
   justify-content: center;
-  width: 100%;
+  padding: 10px 0;
+  position: sticky;
+  top: 80px;
+  z-index: 999;
 }
 
-.navbar li {
-  margin: 0 1em;
-}
-
-.navbar a {
+.menubar a {
   text-decoration: none;
-  color: #333;
+  margin: 0 15px;
   font-weight: bold;
+  color: #333;
+}
+
+.menubar a:hover {
+  color: #004080;
+}
+
+main {
+  padding: 150px 2em 4em;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Kontaktformular */
+#kontakt {
+  margin-top: 4em;
+  padding: 3em 2em;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#kontakt h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#kontakt form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#kontakt input,
+#kontakt textarea,
+#kontakt select {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 1em;
 }
 
-.navbar a:hover {
-  color: #000;
+#kontakt button {
+  background-color: #004080;
+  color: white;
+  padding: 0.8em;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* === Hauptbereich unter dem fixierten Header === */
-main {
-  padding-top: 200px;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: 4em;
-  text-align: center;
-}
-
-main p {
-  margin: 2em 0;
-  font-size: 1.1em;
-  line-height: 1.6;
+#kontakt button:hover {
+  background-color: #0066cc;
 }
