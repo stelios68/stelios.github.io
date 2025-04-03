@@ -1,49 +1,84 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f8f6f2;
-  color: #222;
-} 
+  background: #fdfdfd;
+  color: #333;
+}
 
-/* === Fixierte Leiste === */
+/* Fester Header oben */
 .topbar {
-  background: #eca9c5;
-  color: #222;
-  padding: 0.8em 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: #e89bbd;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.topbar-left {
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+
+.logo-title {
   display: flex;
   align-items: center;
+  gap: 1em;
 }
 
 .logo {
   height: 60px;
-  margin-right: 1em;
 }
 
-.site-title {
+.titelblock {
   text-align: center;
-  flex: 1;
 }
 
+.titelblock h1 {
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.titelblock p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #4b2e3f;
+}
+
+/* Navigation darunter */
+.navmenu {
+  display: flex;
+  justify-content: center;
+  background-color: #a54c75;
+  padding: 0.4em 0;
+  position: sticky;
+  top: 90px;
+  z-index: 999;
+}
+
+.navmenu a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navmenu a:hover {
+  text-decoration: underline;
+}
+
+/* Sprach-Dropdown */
 .language-dropdown {
   position: relative;
-  margin-right: 20px;
 }
 
 .lang-btn {
   background-color: white;
-  border: 1px solid #888;
+  border: 1px solid #aaa;
   padding: 6px 12px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
 }
@@ -52,81 +87,39 @@ body {
   display: none;
   position: absolute;
   right: 0;
-  top: 110%;
+  top: 100%;
+  min-width: 130px;
   background-color: white;
-  border: 1px solid #aaa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   border-radius: 4px;
-  z-index: 9999;
+  margin-top: 4px;
+  z-index: 1001;
+}
+
+.lang-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.lang-menu a:hover {
+  background-color: #eee;
 }
 
 .language-dropdown:focus-within .lang-menu {
   display: block;
 }
 
-.lang-menu a {
-  display: block;
-  padding: 10px 14px;
-  text-decoration: none;
-  color: #004080;
-  font-weight: bold;
-}
-
-.lang-menu a:hover {
-  background-color: #f0f0f0;
-}
-
-/* === Menüleiste darunter === */
-.main-menu {
-  position: fixed;
-  top: 100px;
-  width: 100%;
-  background: #b94f83;
-  text-align: center;
-  padding: 0.5em 0;
-  z-index: 999;
-}
-
-.main-menu a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
+/* Hauptinhalt unter dem Header */
 main {
-  margin-top: 160px;
-  padding: 2em;
+  padding: 170px 1em 3em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.inhalt {
   text-align: center;
-}
-
-/* === Kontaktformular === */
-.kontaktformular {
-  max-width: 500px;
-  margin: 2em auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  text-align: left;
-}
-
-.kontaktformular input,
-.kontaktformular select,
-.kontaktformular textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-}
-
-.kontaktformular button {
-  padding: 10px;
-  background-color: #004080;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.kontaktformular button:hover {
-  background-color: #002850;
+  line-height: 1.6;
 }
