@@ -109,7 +109,10 @@ body {
 
 /* Hauptinhalt unter dem fixierten Kopfbereich */
 main {
-  padding: 160px 2em 2em;
+  padding-top: 200px;  /* 80px topbar + 60px navbar + etwas Abstand */
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
   text-align: center;
 }
 
