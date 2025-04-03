@@ -5,7 +5,7 @@ body {
   color: #333;
 }
 
-/* === OBERSTE LEISTE FIX === */
+/* === OBERSTE FIXE LEISTE === */
 .topbar {
   position: fixed;
   top: 0;
@@ -20,7 +20,7 @@ body {
   z-index: 1000;
 }
 
-/* === LOGO + TITEL ZENTRIERT === */
+/* === ZENTRIERTER TITEL + LOGO === */
 .topbar-left {
   display: flex;
   align-items: center;
@@ -48,10 +48,10 @@ body {
   font-size: 0.9em;
 }
 
-/* === SPRACH-MENÜ FIX & WEITER LINKS === */
+/* === SPRACH-MENÜ FIX & VERSCHOBEN === */
 .language-dropdown {
   position: relative;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .lang-btn {
@@ -114,7 +114,7 @@ body {
   text-decoration: underline;
 }
 
-/* === INHALT UNTER DEM FIXBEREICH === */
+/* === INHALT UNTER FIX-BEREICH === */
 main {
   margin-top: 180px;
   padding: 2em;
