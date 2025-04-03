@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt – Stelios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="logo1.png" alt="Stelios Logo" class="logo">
+      <div class="title-box">
+        <h1 class="site-title">Kontakt</h1>
+        <p class="site-subtitle">Wir freuen uns auf Ihre Nachricht!</p>
+      </div>
+    </div>
+    <div class="language-dropdown" tabindex="0">
+      <button class="lang-btn">Sprache</button>
+      <div class="lang-menu">
+        <a href="#">Deutsch</a>
+        <a href="#">English</a>
+        <a href="#">Ελληνικά</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="kontaktformular">
+      <h2>Kontaktformular</h2>
+      <form action="https://formspree.io/f/meoarnjd" method="POST">
+        <label>Ihr Name:
+          <input type="text" name="name" required>
+        </label>
+        <label>E-Mail:
+          <input type="email" name="email" required>
+        </label>
+        <label>Telefonnummer:
+          <input type="tel" name="telefon">
+        </label>
+        <label>Ich bin:
+          <select name="kundentyp">
+            <option>Privatkunde</option>
+            <option>Geschäftskunde</option>
+          </select>
+        </label>
+        <label>Nachricht:
+          <textarea name="message" required></textarea>
+        </label>
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
