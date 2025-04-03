@@ -1,54 +1,42 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stelios – Lebensmittelhandel</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Fester oberer Bereich -->
-  <div class="topbar-wrapper">
-    <div class="topbar">
-      <div class="topbar-left">
-        <img src="logo1.png" alt="Stelios Logo" class="logo" />
-      </div>
-
-      <div class="topbar-center">
-        <h1 class="header-title">Willkommen bei Stelios</h1>
-        <p class="header-subtitle">Einzel- & Großhandel für hochwertige Lebensmittel</p>
-      </div>
-
-      <div class="language-dropdown" tabindex="0">
-        <button class="lang-btn">🌐 Sprache</button>
-        <div class="lang-menu">
-          <a href="#">Deutsch</a>
-          <a href="#">English</a>
-          <a href="#">Ελληνικά</a>
-        </div>
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="logo1.png" alt="Stelios Logo" class="logo">
+      <div class="site-title">
+        <h1>Willkommen bei Stelios</h1>
+        <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
       </div>
     </div>
+    <div class="language-dropdown" tabindex="0">
+      <button class="lang-btn">🌐 Sprache</button>
+      <div class="lang-menu">
+        <a href="#">Deutsch</a>
+        <a href="#">English</a>
+        <a href="#">Ελληνικά</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Navigation  -->
-    <nav class="navbar">
-      <ul>
-        <li><a href="#">Startseite</a></li>
-        <li><a href="#">Produkte</a></li>
-        <li><a href="#">Galerie</a></li>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Kontakt</a></li>
-        <li><a href="#">Angebote</a></li>
-        <li><a href="#">FAQ</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="menubar">
+    <a href="#">Startseite</a>
+    <a href="#">Produkte</a>
+    <a href="#">Galerie</a>
+    <a href="#">Über uns</a>
+    <a href="#">Kontakt</a>
+    <a href="#">Angebote</a>
+    <a href="#">FAQ</a>
+  </nav>
 
-  <!-- Hauptinhalt -->
   <main>
-    <p>Willkommen bei Stelios – Ihrem Partner für mediterrane Lebensmittel, Qualität und Genuss.</p>
     <p>Wir importieren Spezialitäten aus Griechenland, Italien, Spanien und bieten alles vom Olivenöl bis zur Pasta.</p>
-    <p>Ob Feinkost, Großgebinde für Gastronomie oder kleine Präsente für Kunden – bei uns finden Sie das Richtige.</p>
     <p>Unser Lager bietet über 4.000 Artikel – Weine, Käsesorten, Gewürze, Meeresfrüchte und vieles mehr.</p>
     <p>Unsere Kunden sind Restaurants, Hotels, Feinkostgeschäfte und Privathaushalte aus ganz Deutschland.</p>
     <p>Besuchen Sie unsere Galerie für Eindrücke und Highlights der Saison.</p>
@@ -56,7 +44,32 @@
     <p>Unsere Mitarbeiter beraten Sie gerne persönlich – auch in Ihrer Sprache!</p>
     <p>Scrollen Sie ruhig weiter – hier kommen noch mehr Informationen …</p>
     <p>Wir freuen uns auf Ihre Anfrage – Ihr Stelios-Team!</p>
-  </main>
 
+    <section id="kontakt">
+      <h2>Kontaktformular</h2>
+      <form action="https://formspree.io/f/meoarjnd" method="POST">
+        <label for="name">Ihr Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Ihre E-Mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefon">Telefonnummer:</label>
+        <input type="tel" id="telefon" name="telefon">
+
+        <label for="typ">Ich bin:</label>
+        <select id="typ" name="typ" required>
+          <option value="">Bitte wählen</option>
+          <option value="privat">Privatkunde</option>
+          <option value="geschaeft">Geschäftskunde</option>
+        </select>
+
+        <label for="nachricht">Nachricht:</label>
+        <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
+
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
