@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* === Topbar (fixiert oben) === */
+/* === Fixierte obere Leiste === */
 .topbar {
   position: fixed;
   top: 0;
@@ -19,7 +19,7 @@ body {
   padding: 1em 2em;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
-  border-bottom: none; /* keine weiße Linie mehr */
+  border-bottom: none;
 }
 
 .topbar-left {
@@ -49,10 +49,10 @@ body {
   margin: 0.3em 0 0;
 }
 
-/* === Sprachmenü === */
+/* === Sprachmenü rechts === */
 .language-dropdown {
   position: relative;
-  margin-right: 30px; /* weiter nach innen */
+  margin-right: 40px; /* weiter nach innen */
   z-index: 2000;
 }
 
@@ -67,7 +67,7 @@ body {
   font-size: 0.9em;
 }
 
-/* Das Dropdown-Menü */
+/* Dropdown-Menü */
 .lang-menu {
   display: none;
   position: absolute;
@@ -83,7 +83,7 @@ body {
   z-index: 9999;
 }
 
-/* Nur bei Klick aktiv – kein Hover! */
+/* Nur bei Klick aktiv */
 .language-dropdown:focus-within .lang-menu {
   display: block;
 }
@@ -137,7 +137,7 @@ body {
   color: #000;
 }
 
-/* === Hauptinhalt (scrollbar unter Menü) === */
+/* === Hauptbereich === */
 main {
   padding-top: 210px;
   padding-left: 2em;
@@ -146,7 +146,6 @@ main {
   text-align: center;
 }
 
-/* Test-Abschnitte für Scroll */
 main p {
   margin: 2em 0;
   font-size: 1.1em;
