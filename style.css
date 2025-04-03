@@ -1,140 +1,160 @@
+/* Allgemein */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #fdfdfd;
-  color: #222;
+  background-color: #fefefe;
+  color: #333;
 }
 
+/* Topbar oben */
 .topbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: #ecd8c4;
-  color: #004080;
+  height: 90px;
+  background-color: #e9c4c4;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  justify-content: space-between;
+  padding: 0 2em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   height: 60px;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
-.title-box {
-  display: flex;
-  flex-direction: column;
-}
-
-.site-title {
+.seite-titel {
+  margin: 0;
+  text-align: center;
+  flex: 1;
   font-size: 1.5em;
-  margin: 0;
+  color: #002244;
 }
 
-.site-subtitle {
-  font-size: 0.9em;
-  margin: 0;
-}
-
+/* Sprachmenü */
 .language-dropdown {
   position: relative;
-  margin-left: auto;
+  outline: none;
 }
 
 .lang-btn {
   background-color: #fff;
+  color: #004080;
   border: 1px solid #004080;
   padding: 6px 12px;
-  font-weight: bold;
-  color: #004080;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .lang-menu {
   display: none;
   position: absolute;
-  top: 100%;
   right: 0;
-  min-width: 150px;
-  background: white;
+  top: 100%;
+  min-width: 120px;
+  background-color: white;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   border-radius: 4px;
-  z-index: 999;
-}
-
-.language-dropdown:focus-within .lang-menu {
-  display: block;
+  z-index: 9999;
+  margin-top: 5px;
 }
 
 .lang-menu a {
   display: block;
-  padding: 10px 14px;
-  color: #004080;
+  padding: 10px;
   text-decoration: none;
+  color: #004080;
 }
 
 .lang-menu a:hover {
   background-color: #f0f0f0;
 }
 
-.main-nav {
-  background-color: #c89f9c;
-  text-align: center;
-  padding: 0.5em 0;
-  margin-top: 120px;
-  position: sticky;
+/* Sichtbar beim Klicken/Fokus */
+.language-dropdown:focus-within .lang-menu {
+  display: block;
+}
+
+/* Menüleiste */
+.menubar {
+  position: fixed;
   top: 90px;
+  width: 100%;
+  background-color: #c69dad;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 10px 0;
   z-index: 999;
 }
 
-.main-nav a {
+.menubar a {
   color: white;
-  font-weight: bold;
   text-decoration: none;
-  margin: 0 15px;
+  font-weight: bold;
 }
 
+.menubar a:hover {
+  text-decoration: underline;
+}
+
+/* Inhalt */
 main {
-  padding: 160px 2em 3em;
+  padding: 160px 2em 2em;
+}
+
+.text-block {
+  max-width: 800px;
+  margin: auto;
   text-align: center;
 }
 
-.kontaktformular {
-  max-width: 600px;
-  margin: 3em auto;
-  padding: 1.5em;
-  background: #f6f6f6;
-  border-radius: 6px;
+.kontaktbereich {
+  max-width: 800px;
+  margin: 4em auto;
+  padding: 2em;
+  background-color: #f8f8f8;
+  border-radius: 8px;
 }
 
-.kontaktformular form {
+.kontaktbereich h2 {
+  text-align: center;
+}
+
+form {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.kontaktformular input,
-.kontaktformular select,
-.kontaktformular textarea {
-  padding: 0.7em;
+input, select, textarea {
+  padding: 10px;
   font-size: 1em;
-  width: 100%;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.kontaktformular button {
-  background: #004080;
+button {
+  padding: 10px;
+  font-size: 1em;
+  background-color: #004080;
   color: white;
   border: none;
-  padding: 0.8em;
-  border-radius: 4px;
-  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #003060;
 }
