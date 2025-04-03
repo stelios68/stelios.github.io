@@ -52,7 +52,7 @@ body {
 /* === Sprachmenü === */
 .language-dropdown {
   position: relative;
-  margin-right: 10px;
+  margin-right: 20px;  /* weiter nach links gerückt */
   z-index: 2000;
 }
 
@@ -67,18 +67,25 @@ body {
   font-size: 0.9em;
 }
 
+/* Das Dropdown-Menü */
 .lang-menu {
   display: none;
   position: absolute;
   top: 100%;
   right: 0;
-  min-width: 150px;
+  min-width: 160px;
   background-color: white;
   border: 1px solid #ccc;
   margin-top: 4px;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   overflow: hidden;
+  z-index: 9999;
+}
+
+/* Nur focus-within – NICHT hover! */
+.language-dropdown:focus-within .lang-menu {
+  display: block;
 }
 
 .lang-menu a {
@@ -92,11 +99,6 @@ body {
 
 .lang-menu a:hover {
   background-color: #f0f0f0;
-}
-
-.language-dropdown:hover .lang-menu,
-.language-dropdown:focus-within .lang-menu {
-  display: block;
 }
 
 /* === Navigationsleiste === */
@@ -137,7 +139,7 @@ body {
 
 /* === Hauptinhalt unter fixiertem Header + Menü === */
 main {
-  padding-top: 210px; /* Platz für Topbar + Navbar */
+  padding-top: 210px;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 2em;
