@@ -86,8 +86,10 @@ body {
   background-color: #f0f0f0;
 }
 
-.language-dropdown:hover .lang-menu {
+.language-dropdown:focus-within .lang-menu {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* === Hauptinhalt rutscht unter den fixierten Header === */
