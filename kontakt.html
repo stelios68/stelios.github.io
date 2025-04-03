@@ -1,145 +1,67 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fdfaf7;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="logo-titel">
+        <img src="logo.png" alt="Stelios Logo" class="logo" />
+        <div class="titelgruppe">
+          <h1>Kontakt</h1>
+          <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
+        </div>
+      </div>
+      <div class="language-dropdown" tabindex="0">
+        <button class="lang-btn">Sprache</button>
+        <div class="lang-menu">
+          <a href="#">Deutsch</a>
+          <a href="#">Englisch</a>
+          <a href="#">Griechisch</a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Startseite</a>
+      <a href="#">Produkte</a>
+      <a href="#">Galerie</a>
+      <a href="#">Über uns</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
+      <a href="#">Angebote</a>
+      <a href="#">FAQ</a>
+    </nav>
+  </header>
 
-header.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #e78fbb;
-  z-index: 999;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.topbar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 1.5em;
-}
-
-.logo {
-  height: 60px;
-  margin-right: 1em;
-}
-
-.logo-titel {
-  display: flex;
-  align-items: center;
-}
-
-.titelgruppe {
-  display: flex;
-  flex-direction: column;
-}
-
-.titelgruppe h1 {
-  margin: 0;
-  font-size: 1.6em;
-  color: #300030;
-}
-
-.titelgruppe p {
-  margin: 0;
-  font-size: 0.9em;
-  color: #111;
-}
-
-.language-dropdown {
-  position: relative;
-}
-
-.lang-btn {
-  background: #fff;
-  border: 1px solid #555;
-  padding: 6px 12px;
-  font-size: 0.9em;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.lang-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  min-width: 140px;
-  border-radius: 4px;
-  z-index: 1000;
-}
-
-.language-dropdown:focus-within .lang-menu {
-  display: block;
-}
-
-.lang-menu a {
-  display: block;
-  padding: 10px;
-  color: #004080;
-  text-decoration: none;
-}
-
-.lang-menu a:hover {
-  background-color: #f0f0f0;
-}
-
-nav.main-nav {
-  background-color: #9a3c7f;
-  text-align: center;
-}
-
-nav.main-nav a {
-  display: inline-block;
-  padding: 1em;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-nav.main-nav a.active {
-  background-color: #7a2d63;
-}
-
-main {
-  padding: 200px 2em 2em;
-}
-
-main h2 {
-  text-align: center;
-}
-
-.kontakt-formular {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.kontakt-formular input,
-.kontakt-formular textarea,
-.kontakt-formular select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  font-size: 1em;
-}
-
-.kontakt-formular button {
-  width: fit-content;
-  align-self: center;
-  padding: 10px 20px;
-  background-color: #004080;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  <main>
+    <section class="kontakt">
+      <h2>Kontaktformular</h2>
+      <form action="https://formspree.io/f/meoarnjd" method="POST" class="kontakt-formular">
+        <label>Ihr Name:
+          <input type="text" name="name" required />
+        </label>
+        <label>Ihre E-Mail:
+          <input type="email" name="email" required />
+        </label>
+        <label>Telefonnummer:
+          <input type="tel" name="telefon" />
+        </label>
+        <label>Ich bin:
+          <select name="kunde">
+            <option>Bitte wählen</option>
+            <option>Privatkunde</option>
+            <option>Geschäftskunde</option>
+          </select>
+        </label>
+        <label>Nachricht:
+          <textarea name="nachricht" rows="4" required></textarea>
+        </label>
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
