@@ -7,71 +7,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <div class="header-container">
-        <img src="logo1.png" alt="Stelios Logo" class="logo">
-        <div class="title-container">
-            <h1>Kontakt</h1>
-            <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
+    <header class="top-bar">
+        <div class="logo-title">
+            <img src="logo1.png" alt="Stelios Logo">
+            <div class="title-text">
+                <h1>Kontakt</h1>
+                <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
+            </div>
         </div>
-        <div class="language-dropdown">
-            <button onclick="toggleDropdown()" class="dropbtn">Sprache</button>
-            <div id="dropdown" class="dropdown-content">
+        <div class="dropdown">
+            <button class="dropbtn">Sprache</button>
+            <div class="dropdown-content">
                 <a href="#">Deutsch</a>
                 <a href="#">English</a>
                 <a href="#">Ελληνικά</a>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<nav>
-    <a href="index.html">Startseite</a>
-    <a href="#">Produkte</a>
-    <a href="#">Galerie</a>
-    <a href="#">Über uns</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="#">Angebote</a>
-    <a href="#">FAQ</a>
-</nav>
+    <nav class="navbar">
+        <a href="index.html">Startseite</a>
+        <a href="#">Produkte</a>
+        <a href="#">Galerie</a>
+        <a href="#">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="#">Angebote</a>
+        <a href="#">FAQ</a>
+    </nav>
 
-<main>
-    <h2>Kontaktformular</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label for="name">Ihr Name:</label>
-        <input type="text" id="name" name="name" required>
+    <main class="main-content">
+        <h2>Kontaktformular</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Ihr Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Ihre E-Mail:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Ihre E-Mail:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="telefon">Telefonnummer:</label>
-        <input type="text" id="telefon" name="telefon">
+            <label for="phone">Telefonnummer:</label>
+            <input type="text" id="phone" name="phone">
 
-        <label for="kundentyp">Ich bin:</label>
-        <select id="kundentyp" name="kundentyp">
-            <option value="">Bitte wählen</option>
-            <option value="privatkunde">Privatkunde</option>
-            <option value="geschaeftskunde">Geschäftskunde</option>
-        </select>
+            <label for="kundenart">Ich bin:</label>
+            <select id="kundenart" name="kundenart">
+                <option value="">Bitte wählen</option>
+                <option value="privatkunde">Privatkunde</option>
+                <option value="geschaeftskunde">Geschäftskunde</option>
+            </select>
 
-        <label for="message">Ihre Nachricht:</label>
-        <textarea id="message" name="message" required></textarea>
+            <label for="message">Ihre Nachricht:</label>
+            <textarea id="message" name="message" required></textarea>
 
-        <button type="submit">Absenden</button>
-    </form>
-</main>
-
-<script>
-function toggleDropdown() {
-  var dropdown = document.getElementById("dropdown");
-  if (dropdown.style.display === "block") {
-    dropdown.style.display = "none";
-  } else {
-    dropdown.style.display = "block";
-  }
-}
-</script>
-
+            <input type="submit" value="Absenden">
+        </form>
+    </main>
 </body>
 </html>
