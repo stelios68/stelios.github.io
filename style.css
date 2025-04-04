@@ -1,169 +1,149 @@
-/* === BASISLAYOUT === */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
 }
 
-/* === FIXIERTE OBERLEISTE === */
 .topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f4c6cf;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
+    background: #f48fb1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .topbar-left {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-center {
+    text-align: center;
+    margin-left: 10px;
 }
 
 .logo {
-  height: 60px;
-  margin-right: 20px;
+    height: 60px;
+    margin-right: 10px;
 }
 
-.site-title h1 {
-  margin: 0;
-  font-size: 1.6em;
-  color: #222;
+.seite-titel {
+    margin: 0;
+    font-size: 1.6em;
 }
 
-.site-title p {
-  margin: 0;
-  font-size: 0.9em;
-  color: #555;
+.seite-subtitel {
+    margin: 0;
+    font-size: 0.9em;
 }
 
-/* === SPRACH-DROPDOWN === */
 .language-dropdown {
-  position: relative;
-  margin-right: 10px;
+    position: relative;
+    margin-left: auto;
 }
 
 .lang-btn {
-  background-color: white;
-  color: #004080;
-  border: 1px solid #004080;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.9em;
+    background-color: white;
+    color: #800080;
+    border: 1px solid #800080;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9em;
 }
 
 .lang-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 110%;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  min-width: 120px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  z-index: 9999;
-}
-
-.lang-menu a {
-  display: block;
-  padding: 10px;
-  color: #004080;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-.lang-menu a:hover {
-  background-color: #f0f0f0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    min-width: 140px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
 }
 
 .language-dropdown:focus-within .lang-menu {
-  display: block;
+    display: block;
 }
 
-/* === FIXE NAVIGATION === */
-.main-nav {
-  position: fixed;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  background-color: #c1839f;
-  padding: 10px 0;
-  text-align: center;
-  z-index: 999;
+.lang-menu a {
+    display: block;
+    padding: 10px;
+    color: #800080;
+    text-decoration: none;
 }
 
-.main-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+.lang-menu a:hover {
+    background: #f0f0f0;
 }
 
-.main-nav a.active,
-.main-nav a:hover {
-  text-decoration: underline;
+.navbar {
+    margin-top: 120px;
+    background: #800080;
+    text-align: center;
+    padding: 0.8em 0;
+    position: sticky;
+    top: 100px;
+    z-index: 999;
 }
 
-/* === INHALT UNTER FIX-BEREICH === */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
 main {
-  padding: 160px 20px 40px;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+    padding: 2em;
+    margin-top: 60px;
 }
 
-/* === KONTAKTFORMULAR UNTEREINANDER === */
-.kontakt-formular {
-  max-width: 600px;
-  margin: 40px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: left;
+.kontaktbereich {
+    text-align: center;
 }
 
-.kontakt-formular label {
-  font-weight: bold;
-  font-size: 0.95em;
+.kontaktformular {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.kontakt-formular input,
-.kontakt-formular select,
-.kontakt-formular textarea {
-  padding: 10px;
-  font-size: 1em;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  width: 100%;
-  box-sizing: border-box;
+.kontaktformular input,
+.kontaktformular select,
+.kontaktformular textarea,
+.kontaktformular button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
 }
 
-.kontakt-formular textarea {
-  min-height: 120px;
-  resize: vertical;
+.kontaktformular textarea {
+    height: 120px;
 }
 
-.kontakt-formular button {
-  padding: 10px 20px;
-  background-color: #004080;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
+.kontaktformular button {
+    background: #800080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.kontakt-formular button:hover {
-  background-color: #003060;
+.kontaktformular button:hover {
+    background: #5a005a;
 }
