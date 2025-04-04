@@ -1,1 +1,24 @@
+<h2>Formulario de Contacto</h2>
+<form action="https://formspree.io/f/meoarrjd" method="POST">
+  <label for="name">Su Nombre:</label>
+  <input type="text" id="name" name="name" required>
 
+  <label for="email">Su Correo Electrónico:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="phone">Número de Teléfono:</label>
+  <input type="text" id="phone" name="phone">
+
+  <label for="role">Soy:</label>
+  <select id="role" name="role">
+    <option>Por favor seleccione</option>
+    <option>Cliente Particular</option>
+    <option>Cliente Empresarial</option>
+    <option>Hotel/Gastronomía</option>
+  </select>
+
+  <label for="message">Su Mensaje:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
