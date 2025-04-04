@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Stelios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header class="header">
+  <div class="header-top">
+    <img src="logo1.png" alt="Stelios Logo" class="logo">
+    <div class="header-center">
+      <h1>Welcome to Stelios</h1>
+      <p>Wholesale & Retail of High-Quality Food Products</p>
+    </div>
+    <div class="language-dropdown">
+      <button onclick="toggleDropdown()" class="dropbtn">Language</button>
+      <div id="dropdown" class="dropdown-content">
+        <a href="index.html">Deutsch</a>
+        <a href="index-en.html">English</a>
+        <a href="#">Ελληνικά</a> <!-- später index-gr.html -->
+      </div>
+    </div>
+  </div>
+
+  <nav class="navigation">
+    <a href="index-en.html">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Gallery</a>
+    <a href="#">About Us</a>
+    <a href="kontakt.html">Contact</a>
+    <a href="#">Offers</a>
+    <a href="#">FAQ</a>
+  </nav>
+</header>
+
+<main class="main-content">
+  <p>We import specialties from Greece, Italy, and Spain, offering everything from olive oil to pasta.</p>
+  <p>Our warehouse holds over 4,000 products – wines, cheeses, spices, seafood, and much more.</p>
+  <p>Our customers include restaurants, hotels, fine food shops, and private households throughout Germany.</p>
+  <p>Visit our gallery for highlights and seasonal offers.</p>
+  <p>Contact us for special promotions, offers, or customized orders.</p>
+  <p>Our team is happy to assist you personally – even in your language!</p>
+</main>
+
+<script>
+function toggleDropdown() {
+  var dropdown = document.getElementById("dropdown");
+  dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
