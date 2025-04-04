@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt - Stelios</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top-header">
-    <div class="logo-title-container">
-      <img src="logo1.png" alt="Stelios Logo" class="logo">
-      <div class="title-container">
-        <h1>Kontakt</h1>
-        <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
-      </div>
-      <div class="language-selector">
-        <button class="language-button">Sprache</button>
-      </div>
+
+<header>
+    <div class="header-top">
+        <img src="logo1.png" alt="Stelios Logo" class="logo">
+        <div class="header-text">
+            <h1>Kontakt</h1>
+            <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
+        </div>
+        <div class="language-button">
+            <button>Sprache</button>
+        </div>
     </div>
-  </header>
+    <nav class="navigation">
+        <a href="index.html">Startseite</a>
+        <a href="#">Produkte</a>
+        <a href="#">Galerie</a>
+        <a href="#">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="#">Angebote</a>
+        <a href="#">FAQ</a>
+    </nav>
+</header>
 
-  <nav class="main-nav">
-    <a href="index.html">Startseite</a>
-    <a href="#">Produkte</a>
-    <a href="#">Galerie</a>
-    <a href="#">Über uns</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="#">Angebote</a>
-    <a href="#">FAQ</a>
-  </nav>
-
-  <main class="content">
-    <section>
-      <h2>Kontaktformular</h2>
-      <form action="https://formspree.io/f/xxxxxxx" method="POST">
-        <label>Ihr Name: <input type="text" name="name" required></label>
-        <label>Ihre E-Mail: <input type="email" name="email" required></label>
-        <label>Telefonnummer: <input type="text" name="telefon"></label>
-        <label>Ich bin: 
-          <select name="kunde">
-            <option value="">Bitte wählen</option>
-            <option value="privat">Privatkunde</option>
-            <option value="gewerblich">Geschäftskunde</option>
-          </select>
-        </label>
-        <label>Ihre Nachricht: <textarea name="message" required></textarea></label>
-        <button type="submit">Absenden</button>
-      </form>
+<main>
+    <section class="form-section">
+        <h2>Kontaktformular</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label>Ihr Name:
+                <input type="text" name="name" required>
+            </label>
+            <label>Ihre E-Mail:
+                <input type="email" name="email" required>
+            </label>
+            <label>Telefonnummer:
+                <input type="text" name="phone">
+            </label>
+            <label>Ich bin:
+                <select name="kunde">
+                    <option>Bitte wählen</option>
+                    <option>Privatkunde</option>
+                    <option>Geschäftskunde</option>
+                </select>
+            </label>
+            <label>Ihre Nachricht:
+                <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">Absenden</button>
+        </form>
     </section>
-  </main>
+</main>
+
 </body>
 </html>
