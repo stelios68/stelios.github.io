@@ -8,41 +8,55 @@
 </head>
 <body>
 
-<header class="header">
-    <div class="header-top">
+<header>
+    <div class="header-container">
         <img src="logo1.png" alt="Stelios Logo" class="logo">
-        <div class="title-block">
+        <div class="title-container">
             <h1>Willkommen bei Stelios</h1>
             <p>Einzel- & Großhandel für hochwertige Lebensmittel</p>
         </div>
-        <button class="language-button">Sprache</button>
-    </div>
-
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="index.html">Startseite</a>
-            <a href="#">Produkte</a>
-            <a href="#">Galerie</a>
-            <a href="#">Über uns</a>
-            <a href="kontakt.html">Kontakt</a>
-            <a href="#">Angebote</a>
-            <a href="#">FAQ</a>
+        <div class="language-dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">Sprache</button>
+            <div id="dropdown" class="dropdown-content">
+                <a href="#">Deutsch</a>
+                <a href="#">English</a>
+                <a href="#">Ελληνικά</a>
+            </div>
         </div>
-    </nav>
+    </div>
 </header>
 
+<nav>
+    <a href="index.html">Startseite</a>
+    <a href="#">Produkte</a>
+    <a href="#">Galerie</a>
+    <a href="#">Über uns</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="#">Angebote</a>
+    <a href="#">FAQ</a>
+</nav>
+
 <main>
-    <section class="content">
-        <p>Wir importieren Spezialitäten aus Griechenland, Italien, Spanien und bieten alles vom Olivenöl bis zur Pasta.</p>
-        <p>Unser Lager bietet über 4.000 Artikel – Weine, Käsesorten, Gewürze, Meeresfrüchte und vieles mehr.</p>
-        <p>Unsere Kunden sind Restaurants, Hotels, Feinkostgeschäfte und Privathaushalte aus ganz Deutschland.</p>
-        <p>Besuchen Sie unsere Galerie für Eindrücke und Highlights der Saison.</p>
-        <p>Kontaktieren Sie uns für Angebote, Sonderaktionen oder individuelle Bestellungen.</p>
-        <p>Unsere Mitarbeiter beraten Sie gerne persönlich – auch in Ihrer Sprache!</p>
-        <p>Scrollen Sie ruhig weiter – hier kommen noch mehr Informationen …</p>
-        <p>Wir freuen uns auf Ihre Anfrage – Ihr Stelios-Team!</p>
-    </section>
+    <p>Wir importieren Spezialitäten aus Griechenland, Italien, Spanien und bieten alles vom Olivenöl bis zur Pasta.</p>
+    <p>Unser Lager bietet über 4.000 Artikel – Weine, Käsesorten, Gewürze, Meeresfrüchte und vieles mehr.</p>
+    <p>Unsere Kunden sind Restaurants, Hotels, Feinkostgeschäfte und Privathaushalte aus ganz Deutschland.</p>
+    <p>Besuchen Sie unsere Galerie für Eindrücke und Highlights der Saison.</p>
+    <p>Kontaktieren Sie uns für Angebote, Sonderaktionen oder individuelle Bestellungen.</p>
+    <p>Unsere Mitarbeiter beraten Sie gerne persönlich – auch in Ihrer Sprache!</p>
+    <p>Scrollen Sie ruhig weiter – hier kommen noch mehr Informationen …</p>
+    <p>Wir freuen uns auf Ihre Anfrage – Ihr Stelios-Team!</p>
 </main>
+
+<script>
+function toggleDropdown() {
+  var dropdown = document.getElementById("dropdown");
+  if (dropdown.style.display === "block") {
+    dropdown.style.display = "none";
+  } else {
+    dropdown.style.display = "block";
+  }
+}
+</script>
 
 </body>
 </html>
