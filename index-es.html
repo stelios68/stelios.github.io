@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido a Stelios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header class="header">
+  <div class="header-top">
+    <img src="logo1.png" alt="Stelios Logo" class="logo">
+    <div class="header-center">
+      <h1>Bienvenido a Stelios</h1>
+      <p>Venta al por mayor y al por menor de alimentos de alta calidad</p>
+    </div>
+    <div class="language-dropdown">
+      <button onclick="toggleDropdown()" class="dropbtn">Idioma</button>
+      <div id="dropdown" class="dropdown-content">
+        <a href="index.html">Deutsch</a>
+        <a href="index-en.html">English</a>
+        <a href="index-gr.html">Ελληνικά</a>
+        <a href="index-es.html">Español</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navigation">
+    <a href="index-es.html">Inicio</a>
+    <a href="#">Productos</a>
+    <a href="#">Galería</a>
+    <a href="#">Sobre nosotros</a>
+    <a href="kontakt.html">Contacto</a>
+    <a href="#">Ofertas</a>
+    <a href="#">FAQ</a>
+  </nav>
+</header>
+
+<main class="main-content">
+  <p>Importamos especialidades de Grecia, Italia y España, ofreciendo todo, desde aceite de oliva hasta pasta.</p>
+  <p>Nuestro almacén dispone de más de 4.000 productos: vinos, quesos, especias, mariscos y mucho más.</p>
+  <p>Entre nuestros clientes se encuentran restaurantes, hoteles, tiendas gourmet y hogares privados en toda Alemania.</p>
+  <p>Visite nuestra galería para ver nuestras ofertas y novedades de temporada.</p>
+  <p>Contáctenos para promociones especiales, ofertas o pedidos personalizados.</p>
+  <p>¡Nuestro equipo estará encantado de asesorarle, incluso en su idioma!</p>
+</main>
+
+<script>
+function toggleDropdown() {
+  var dropdown = document.getElementById("dropdown");
+  dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
