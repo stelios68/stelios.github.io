@@ -1,149 +1,122 @@
+/* Basis */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
+/* Topbar */
 .topbar {
-    background: #f48fb1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 2em;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  background-color: #f48fb1; /* helles Rosa */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
-.topbar-left {
-    display: flex;
-    align-items: center;
-}
-
-.topbar-center {
-    text-align: center;
-    margin-left: 10px;
-}
-
+/* Logo */
 .logo {
-    height: 60px;
-    margin-right: 10px;
+  height: 50px;
 }
 
-.seite-titel {
-    margin: 0;
-    font-size: 1.6em;
+/* Mitte */
+.topbar-center {
+  text-align: center;
+  flex-grow: 1;
 }
 
-.seite-subtitel {
-    margin: 0;
-    font-size: 0.9em;
+.topbar-center h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.topbar-center p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Sprachbutton */
+.topbar-right {
+  display: flex;
+  align-items: center;
 }
 
 .language-dropdown {
-    position: relative;
-    margin-left: auto;
+  position: relative;
 }
 
 .lang-btn {
-    background-color: white;
-    color: #800080;
-    border: 1px solid #800080;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 0.9em;
+  background: white;
+  color: #8e24aa;
+  border: 1px solid #8e24aa;
+  padding: 8px 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .lang-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: white;
-    border: 1px solid #ccc;
-    min-width: 140px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    border-radius: 4px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 120px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
 }
 
 .language-dropdown:focus-within .lang-menu {
-    display: block;
+  display: block;
 }
 
 .lang-menu a {
-    display: block;
-    padding: 10px;
-    color: #800080;
-    text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: #8e24aa;
+  text-decoration: none;
 }
 
 .lang-menu a:hover {
-    background: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
-.navbar {
-    margin-top: 120px;
-    background: #800080;
-    text-align: center;
-    padding: 0.8em 0;
-    position: sticky;
-    top: 100px;
-    z-index: 999;
+/* Navigation */
+.main-nav {
+  background-color: #8e24aa; /* dunkleres Violett */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 12px 0;
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  z-index: 999;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+.main-nav a:hover {
+  text-decoration: underline;
 }
 
+/* Hauptinhalt */
 main {
-    padding: 2em;
-    margin-top: 60px;
+  margin-top: 180px; /* Abstand für beide fixen Leisten */
+  padding: 2em;
 }
 
-.kontaktbereich {
-    text-align: center;
-}
-
-.kontaktformular {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.kontaktformular input,
-.kontaktformular select,
-.kontaktformular textarea,
-.kontaktformular button {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-}
-
-.kontaktformular textarea {
-    height: 120px;
-}
-
-.kontaktformular button {
-    background: #800080;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.kontaktformular button:hover {
-    background: #5a005a;
+.content {
+  max-width: 800px;
+  margin: 0 auto;
 }
