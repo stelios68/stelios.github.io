@@ -1,21 +1,23 @@
+/* === BASISLAYOUT === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f8f6f2;
-  color: #222;
+  background: #f5f5f5;
+  color: #333;
 }
 
-/* === Fixierte Leiste === */
+/* === FIXIERTE OBERLEISTE === */
 .topbar {
-  background: #eca9c5;
-  color: #222;
-  padding: 0.8em 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+  background-color: #f4c6cf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
@@ -26,26 +28,36 @@ body {
 
 .logo {
   height: 60px;
-  margin-right: 1em;
+  margin-right: 20px;
 }
 
-.site-title {
-  text-align: center;
-  flex: 1;
+.site-title h1 {
+  margin: 0;
+  font-size: 1.6em;
+  color: #222;
 }
 
+.site-title p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* === SPRACH-DROPDOWN === */
 .language-dropdown {
   position: relative;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .lang-btn {
   background-color: white;
-  border: 1px solid #888;
+  color: #004080;
+  border: 1px solid #004080;
   padding: 6px 12px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 0.9em;
 }
 
 .lang-menu {
@@ -54,79 +66,104 @@ body {
   right: 0;
   top: 110%;
   background-color: white;
-  border: 1px solid #aaa;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 120px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   z-index: 9999;
-}
-
-.language-dropdown:focus-within .lang-menu {
-  display: block;
 }
 
 .lang-menu a {
   display: block;
-  padding: 10px 14px;
-  text-decoration: none;
+  padding: 10px;
   color: #004080;
+  text-decoration: none;
   font-weight: bold;
+  font-size: 0.9em;
 }
 
 .lang-menu a:hover {
   background-color: #f0f0f0;
 }
 
-/* === Menüleiste darunter === */
-.main-menu {
+.language-dropdown:focus-within .lang-menu {
+  display: block;
+}
+
+/* === FIXE NAVIGATION === */
+.main-nav {
   position: fixed;
-  top: 100px;
+  top: 80px;
+  left: 0;
   width: 100%;
-  background: #b94f83;
+  background-color: #c1839f;
+  padding: 10px 0;
   text-align: center;
-  padding: 0.5em 0;
   z-index: 999;
 }
 
-.main-menu a {
+.main-nav a {
   margin: 0 15px;
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
 
+.main-nav a.active,
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* === INHALT UNTER FIX-BEREICH === */
 main {
-  margin-top: 160px;
-  padding: 2em;
+  padding: 160px 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
 
-/* === Kontaktformular === */
-.kontaktformular {
-  max-width: 500px;
-  margin: 2em auto;
+/* === KONTAKTFORMULAR UNTEREINANDER === */
+.kontakt-formular {
+  max-width: 600px;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 15px;
   text-align: left;
 }
 
-.kontaktformular input,
-.kontaktformular select,
-.kontaktformular textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
+.kontakt-formular label {
+  font-weight: bold;
+  font-size: 0.95em;
 }
 
-.kontaktformular button {
+.kontakt-formular input,
+.kontakt-formular select,
+.kontakt-formular textarea {
   padding: 10px;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.kontakt-formular textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.kontakt-formular button {
+  padding: 10px 20px;
   background-color: #004080;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.kontaktformular button:hover {
-  background-color: #002850;
+.kontakt-formular button:hover {
+  background-color: #003060;
 }
