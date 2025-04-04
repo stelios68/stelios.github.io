@@ -1,145 +1,149 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fdfaf7;
-  color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
 }
 
-header.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #e78fbb;
-  z-index: 999;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+.topbar {
+    background: #f48fb1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.topbar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 1.5em;
+.topbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-center {
+    text-align: center;
+    margin-left: 10px;
 }
 
 .logo {
-  height: 60px;
-  margin-right: 1em;
+    height: 60px;
+    margin-right: 10px;
 }
 
-.logo-titel {
-  display: flex;
-  align-items: center;
+.seite-titel {
+    margin: 0;
+    font-size: 1.6em;
 }
 
-.titelgruppe {
-  display: flex;
-  flex-direction: column;
-}
-
-.titelgruppe h1 {
-  margin: 0;
-  font-size: 1.6em;
-  color: #300030;
-}
-
-.titelgruppe p {
-  margin: 0;
-  font-size: 0.9em;
-  color: #111;
+.seite-subtitel {
+    margin: 0;
+    font-size: 0.9em;
 }
 
 .language-dropdown {
-  position: relative;
+    position: relative;
+    margin-left: auto;
 }
 
 .lang-btn {
-  background: #fff;
-  border: 1px solid #555;
-  padding: 6px 12px;
-  font-size: 0.9em;
-  border-radius: 6px;
-  cursor: pointer;
+    background-color: white;
+    color: #800080;
+    border: 1px solid #800080;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9em;
 }
 
 .lang-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  min-width: 140px;
-  border-radius: 4px;
-  z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    min-width: 140px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
 }
 
 .language-dropdown:focus-within .lang-menu {
-  display: block;
+    display: block;
 }
 
 .lang-menu a {
-  display: block;
-  padding: 10px;
-  color: #004080;
-  text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #800080;
+    text-decoration: none;
 }
 
 .lang-menu a:hover {
-  background-color: #f0f0f0;
+    background: #f0f0f0;
 }
 
-nav.main-nav {
-  background-color: #9a3c7f;
-  text-align: center;
+.navbar {
+    margin-top: 120px;
+    background: #800080;
+    text-align: center;
+    padding: 0.8em 0;
+    position: sticky;
+    top: 100px;
+    z-index: 999;
 }
 
-nav.main-nav a {
-  display: inline-block;
-  padding: 1em;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-nav.main-nav a.active {
-  background-color: #7a2d63;
+.navbar a:hover {
+    text-decoration: underline;
 }
 
 main {
-  padding: 200px 2em 2em;
+    padding: 2em;
+    margin-top: 60px;
 }
 
-main h2 {
-  text-align: center;
+.kontaktbereich {
+    text-align: center;
 }
 
-.kontakt-formular {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+.kontaktformular {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.kontakt-formular input,
-.kontakt-formular textarea,
-.kontakt-formular select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  font-size: 1em;
+.kontaktformular input,
+.kontaktformular select,
+.kontaktformular textarea,
+.kontaktformular button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
 }
 
-.kontakt-formular button {
-  width: fit-content;
-  align-self: center;
-  padding: 10px 20px;
-  background-color: #004080;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.kontaktformular textarea {
+    height: 120px;
+}
+
+.kontaktformular button {
+    background: #800080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.kontaktformular button:hover {
+    background: #5a005a;
 }
