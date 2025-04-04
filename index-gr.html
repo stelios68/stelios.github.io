@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Καλώς ήρθατε στον Stelios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header class="header">
+  <div class="header-top">
+    <img src="logo1.png" alt="Stelios Logo" class="logo">
+    <div class="header-center">
+      <h1>Καλώς ήρθατε στον Stelios</h1>
+      <p>Χονδρική και λιανική πώληση ποιοτικών τροφίμων</p>
+    </div>
+    <div class="language-dropdown">
+      <button onclick="toggleDropdown()" class="dropbtn">Γλώσσα</button>
+      <div id="dropdown" class="dropdown-content">
+        <a href="index.html">Deutsch</a>
+        <a href="index-en.html">English</a>
+        <a href="index-gr.html">Ελληνικά</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navigation">
+    <a href="index-gr.html">Αρχική</a>
+    <a href="#">Προϊόντα</a>
+    <a href="#">Γκαλερί</a>
+    <a href="#">Σχετικά με εμάς</a>
+    <a href="kontakt.html">Επικοινωνία</a>
+    <a href="#">Προσφορές</a>
+    <a href="#">Συχνές Ερωτήσεις</a>
+  </nav>
+</header>
+
+<main class="main-content">
+  <p>Εισάγουμε ειδικότητες από την Ελλάδα, την Ιταλία και την Ισπανία, προσφέροντας τα πάντα από ελαιόλαδο μέχρι ζυμαρικά.</p>
+  <p>Η αποθήκη μας διαθέτει πάνω από 4.000 προϊόντα – κρασιά, τυριά, μπαχαρικά, θαλασσινά και πολλά άλλα.</p>
+  <p>Οι πελάτες μας περιλαμβάνουν εστιατόρια, ξενοδοχεία, καταστήματα ντελικατέσεν και ιδιώτες σε όλη τη Γερμανία.</p>
+  <p>Επισκεφθείτε τη γκαλερί μας για στιγμιότυπα και εποχιακές προσφορές.</p>
+  <p>Επικοινωνήστε μαζί μας για ειδικές προσφορές ή εξατομικευμένες παραγγελίες.</p>
+  <p>Η ομάδα μας είναι πάντα στη διάθεσή σας – και στη γλώσσα σας!</p>
+</main>
+
+<script>
+function toggleDropdown() {
+  var dropdown = document.getElementById("dropdown");
+  dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
